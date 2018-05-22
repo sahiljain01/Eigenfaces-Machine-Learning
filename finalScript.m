@@ -122,6 +122,10 @@ function errorValue = func(x, imgCompare)
     IATA = AI'*AI;
 
     %Orthogonal Diagonalization using svd
+    %By writing the covariance matrix in terms of a new basis, where the covariances
+    % are 0 except on the main diagonal, we are finding an orthogonal set of vectors, which
+    % is precisely what eigenvectors aim to do, find a set of vectors that are
+    % different (orthogonal) and define unique features of a person's face
 
     [UI,SI,VI] = svd(IATA);
 
