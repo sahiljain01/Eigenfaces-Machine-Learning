@@ -14,8 +14,8 @@ if (strcmp(x, 'Yes'))
 end
 
 
-%  Restart from here until to
-Save the image in case something goes wrong in the middle
+% Restart from here until to
+% Save the image in case something goes wrong in the middle
 
 imwrite(A, 'myimage.jpg');
 img = imread('myimage.jpg');
@@ -135,8 +135,8 @@ function errorValue = func(x, imgCompare)
 
    [rows, columns, numberOfColorChannels] = size(newImage);
 
-         %check if the image is black and white or colored
-         %if the image is colored, then it converts it to grayscale
+    %check if the image is black and white or colored
+    %if the image is colored, then it converts it to grayscale
       if numberOfColorChannels > 1
                 newImage = rgb2gray(newImage);
       end
