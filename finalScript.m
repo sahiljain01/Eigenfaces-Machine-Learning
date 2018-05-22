@@ -40,8 +40,11 @@ finalname = ' ';
 for z = 1:y
     prompt3 = 'Who would you like to compare against?';
     name = input(prompt3, 's');
-    imshow(C)
     error = func(name, D);
+
+    %If the error between the reconstructed image and the true images
+    %is less than for previous training sets, then that training set best
+    %represents that face and is likely the same person
     if (error < leasterror)
         leasterror = error;
         finalname = name;
